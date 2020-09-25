@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
-
+body, html {
+  height: 100%;
+}
 body {
   font-family: 'Nunito Sans', sans-serif;
   background-color: hsl(0, 0%, 98%);
@@ -56,6 +58,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding: 0 3%;
+  height: 100%;
+}
+.cenzao {
+  height: 100%;
 }
 
 .info-country {
