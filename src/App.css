@@ -1,38 +1,160 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: hsl(0, 0%, 98%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header {
+  box-shadow: 10px -3px 42px 0px rgba(0,0,0,0.75);
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 8%;
+}
+
+.Header h1 {
+  font-weight: lighter;
+}
+.Header button {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  font-size: 13pt;
+  font-weight: lighter;
+  justify-content: space-between;
+  outline: none;
+  width: 140px;
+}
+.Header button img {
+  width: 30px;
+}
+
+
+.country {
+  margin: 2%;
+  width: 20%;
+  flex: 1 0 auto;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 10px -3px 48px -20px rgba(0,0,0,0.75);
+  transition: 450ms;
+  text-decoration: none;
+  color: black;
+}
+.country:hover {
+  transition: 450ms;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.country img {
+  width: 100%;
+  border-radius: 7px 7px 0 0;
+}
+
+.countries-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 3%;
+}
+
+.info-country {
+  padding: 15px;
+}
+
+.search-bar {
+  width: 30%;
+  padding: 15px;
+  border: none;
+  border-radius: 7px;
+  margin: 3%;
+  outline: none;
+}
+.filter-area {
+  display: flex;
+  justify-content: space-between;
+}
+.select {
+  height: 60px;
+  padding: 15px;
+  margin: 3%;
+  outline: none;
+  border-radius: 8px;
+  border: none;
+  background-color: white;
+  box-shadow: 10px -3px 48px -115px rgba(0,0,0,0.75);
+}
+
+.country-lp {
+  display: flex;
+  padding: 5%;
+}
+.back {
+  padding: 10px 40px;
+  text-decoration: none;
+  color: black;
+  border-radius: 6px;
+  display: inline-block;box-shadow: 10px -1px 35px -15px rgba(0,0,0,0.75);
+  background-color: white;
+  margin: 2%;
+}
+.country-lp > img {
+  width: 50%;
+  margin-right: 5%;
+}
+.country-lp .info-country-lp {
+  width: 40%;
+  margin-left: 5%;
+}
+.sub-sub {
+  width: 50%;
+}
+.sub-info-lp {
+  display: flex;
+}
+
+
+
+
+.light-mode {
+  color: black;
+}
+
+.light-mode .Header {
+  background-color: white;
+}
+
+.dark-mode {
+  color: white;
+  background-color: hsl(207, 26%, 17%);
+}
+
+.dark-mode .Header {
+  background-color: hsl(209, 23%, 22%);
+}
+
+.dark-mode .country {
+  margin: 2%;
+  width: 20%;
+  flex: 1 0 auto;
+  background-color:hsl(209, 23%, 22%);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dark-mode .select {
+  background-color: hsl(209, 23%, 22%);
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dark-mode .search-bar {
+  background-color: hsl(209, 23%, 22%);
+}
+
+.dark-mode .back {
+  color: white;
+  background-color:hsl(209, 23%, 22%);
+}
+
+.dark-mode .Header button {
+  color: white;
 }
