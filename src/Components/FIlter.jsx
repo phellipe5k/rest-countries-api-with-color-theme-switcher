@@ -1,6 +1,7 @@
 import React from 'react';
 import Region from './Region';
 import SearchBar from './SearchBar';
+import LottieControl from './LottieControl';
 
 class Filter extends React.Component {
 

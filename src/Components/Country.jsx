@@ -6,7 +6,7 @@ class Country extends React.Component {
   render() {
     const { data } = this.props
     return (
-      <Link to={`/countries/${data.name.trim()}`} className='country'>
+      <Link to={`/countries/${data.alpha3Code}`} className='country'>
        <img src={data.flag} alt={data.name} />
        <div className="info-country">
          <h2>{data.name}</h2>

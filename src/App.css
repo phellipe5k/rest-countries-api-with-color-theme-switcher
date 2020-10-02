@@ -68,13 +68,30 @@ body {
   padding: 15px;
 }
 
+.search-bar-label {
+  width: 20%;
+  margin: 3% 5%;
+  height: 30px;
+  align-self: center;
+  position: relative;
+}
+.search-icon {
+  font-size: 14pt;
+  position: absolute;
+  cursor: pointer;
+  top: 60%;
+  left: 15px;
+  color: grey;
+}
+
 .search-bar {
-  width: 30%;
-  padding: 15px;
+  width: 100%;
   border: none;
+  padding: 15px 15px 15px 50px;
   border-radius: 7px;
-  margin: 3%;
   outline: none;
+  height: 100%;
+  align-self: center;
 }
 .filter-area {
   display: flex;
@@ -87,8 +104,41 @@ body {
   outline: none;
   border-radius: 8px;
   border: none;
+  width: 100%;
   background-color: white;
   box-shadow: 10px -3px 48px -115px rgba(0,0,0,0.75);
+  appearance: none;
+  position: relative;
+  cursor: pointer;
+}
+
+
+
+.select-wrap {
+  height: 60px;
+  padding: 15px;
+  margin: 3%;
+  outline: none;
+  border-radius: 8px;
+  border: none;
+  width: 11%;
+  box-shadow: 10px -3px 48px -115px rgba(0,0,0,0.75);
+  appearance: none;
+  position: relative;
+}
+
+.select-wrap::after {
+  content: '';
+  width: 15%;
+  height: 30%;
+  background-image: url('./images/seta-para-baixo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 86%;
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  cursor: pointer;
 }
 
 .country-lp {
@@ -103,6 +153,7 @@ body {
   display: inline-block;box-shadow: 10px -1px 35px -15px rgba(0,0,0,0.75);
   background-color: white;
   margin: 2%;
+  text-align: left !important;
 }
 .country-lp > img {
   width: 50%;
@@ -163,4 +214,95 @@ body {
 
 .dark-mode .Header button {
   color: white;
+}
+
+.dark-mode .search-icon {
+  color: white;
+}
+
+.animation {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+.animation-wrap {
+  position: relative;
+  top: -12%;
+}
+
+.error-Page {
+  width: 100%;
+  text-align: center;
+}
+.error-Page h1 {
+  font-size: 30pt;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1130px) {
+  .country {
+    margin: 2%;
+    width: 25%;
+  }
+
+  .dark-mode .country {
+    margin: 2%;
+    width: 25%;
+  }
+
+  .country-lp {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .country-lp > img {
+    width: 100%;
+    height: 250px;
+    margin-right: 0;
+  }
+  .country-lp .info-country-lp {
+    width: 100%;
+    margin-left: 0;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .country {
+    width: 30%;
+  }
+
+  .dark-mode .country {
+    width: 30%;
+  }
+  .search-bar-label {
+    width: 73%;
+  }
+  .select-wrap {
+    width: 100%;
+    margin-left: -10px;
+  }
+  .filter-area {
+    flex-wrap: wrap;
+  }
+  .select-wrap::after {
+    content: '';
+    width: 20%;
+    height: 40%;
+    background-size: 40%;
+    bottom: 20px;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .country {
+    width: 94%;
+  }
+
+  .dark-mode .country {
+    width: 94%;
+  }
 }

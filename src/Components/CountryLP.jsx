@@ -1,21 +1,30 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class CountryLP extends Component {
   constructor() {
     super();
     this.state = {
       country: '',
-      loading: true
+      loading: true,
+      borderCountries: ''
     }
   }
   componentDidMount() {
-    this.fetchApi();
+    this.fetchApi(this.props.id);
+  }
+  componentDidUpdate() {
+    this.fetchApi(this.props.id);
   }
 
-  fetchApi = async () => {
-    const res = await fetch(`https://restcountries.eu/rest/v2/name/${this.props.id}`);
+  fetchApi = async (id) => {
+    const res = await fetch(`https://restcountries.eu/rest/v2/alpha/${id}`);
     const data = await res.json();
-    this.setState(({ country: data[0], loading: false }))
+    this.setState(({ country: data, loading: false }))
+  }
+
+  refreshPage = () => {
+    window.location.reload(false);
   }
   render() {
     const { country, loading } = this.state;
@@ -44,7 +53,15 @@ class CountryLP extends Component {
               }</p>
             </div>
           </div>
-          <span>Border Countries: </span>
+          <h3>Border Countries: </h3>
+          {
+            country.borders.map(el => (
+              <div className="border-countries">
+                <Link to={`/countries/${el}`}>{el}</Link>
+              </div>
+             
+            ))
+          }
         </div>
       </div>
     )
